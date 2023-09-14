@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Лог Lab1", "Лог Lab1\Лог Lab1.vcxproj", "{9552E315-307E-421C-8ACC-E81AA17EC6F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9552E315-307E-421C-8ACC-E81AA17EC6F7}.Debug|x64.ActiveCfg = Debug|x64
+		{9552E315-307E-421C-8ACC-E81AA17EC6F7}.Debug|x64.Build.0 = Debug|x64
+		{9552E315-307E-421C-8ACC-E81AA17EC6F7}.Debug|x86.ActiveCfg = Debug|Win32
+		{9552E315-307E-421C-8ACC-E81AA17EC6F7}.Debug|x86.Build.0 = Debug|Win32
+		{9552E315-307E-421C-8ACC-E81AA17EC6F7}.Release|x64.ActiveCfg = Release|x64
+		{9552E315-307E-421C-8ACC-E81AA17EC6F7}.Release|x64.Build.0 = Release|x64
+		{9552E315-307E-421C-8ACC-E81AA17EC6F7}.Release|x86.ActiveCfg = Release|Win32
+		{9552E315-307E-421C-8ACC-E81AA17EC6F7}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D53331A4-5342-4CB2-8EE4-A02ADF18A8D5}
+	EndGlobalSection
+EndGlobal
