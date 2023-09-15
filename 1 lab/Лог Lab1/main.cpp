@@ -3,6 +3,7 @@
 #include<time.h>
 #include<stdlib.h>
 #include<iostream>
+#include<string>
 
 using namespace std;
 
@@ -11,9 +12,9 @@ struct student {
 }stud[5];
 
 int main() {
+
 	srand(time(NULL));
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+
 	setlocale(LC_ALL, "Rus");
 	string namepoisk, familpoisk, facultpoisk, Nomstudpoisk;
 
@@ -24,7 +25,7 @@ int main() {
 	}
 	if (v == 1) { // Задание 1-4
 		int size1 = 0, size2 = 0;
-		int** mas;
+		float** mas;
 		while (size1 < 1) {
 			cout << "Введите число столбцов: ";
 			cin >> size1;
@@ -33,18 +34,19 @@ int main() {
 			cout << "Введите число строк: ";
 			cin >> size2;
 		}
-		mas = new int* [size1]; // создаём двумерный массив 
+		mas = new float* [size1]; // создаём двумерный массив 
 		for (int i = 0; i < size1; i++) {
-			mas[i] = new int[size2];
+			mas[i] = new float[size2];
 		}
-		int max, min;
+
+		float max, min;
 		cout << "Выберите, как вводить массив:\n1 - заполнить массив рандомными числами \n2 - заполнить вручную \n";
 		int vibor;
 		cin >> vibor;
 		if (vibor == 1) { // заполняем массив случайными числами 
 			for (int i = 0; i < size1; i++) {
 				for (int o = 0; o < size2; o++) {
-					mas[i][o] = rand() % 100 - 50;
+					mas[i][o] = (rand() % 100 - 50) * 0.1;
 					cout << mas[i][o] << " ";
 				}
 				cout << "\n";
@@ -69,7 +71,18 @@ int main() {
 
 		max = mas[0][0];
 		min = mas[0][0];
-		int sum;
+		float sum;
+
+		float di1 = 0, di2 = 0;
+		if (size1 == size2) {
+			for (int i = 0; i < size1; i++) {
+				di1 += mas[i][i];
+				di2 += mas[i][size1 - i - 1];
+			}
+			cout << "Первая диагональ: " << di1 << "\n";
+			cout << "Вторая диагональ: " << di2 << "\n";
+		}
+		else { cout << "Матрица не квадратная"; }
 
 		for (int i = 0; i < size1; i++) {
 			sum = 0;
@@ -119,7 +132,7 @@ int main() {
 
 			stud[3].name = "Алексей";
 			stud[3].famil = "Аргаткин";
-			stud[3].facult = "ФВТ";
+			stud[3].facult = "Фвт";
 			stud[3].Nomstud = "23";
 
 			stud[4].name = "Дмитрий";
