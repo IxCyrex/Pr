@@ -1,0 +1,7 @@
+﻿  code.cpp
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\3 lab\3 lab\code.cpp(75,6): warning C4101: prior: неиспользованная локальная переменная
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\3 lab\3 lab\code.cpp(266,11): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\3 lab\3 lab\code.cpp(267,28): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\3 lab\3 lab\code.cpp(271,12): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\3 lab\3 lab\code.cpp(272,29): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+  3 lab.vcxproj -> C:\Users\ggggg\OneDrive\Рабочий стол\Pr\3 lab\x64\Debug\3 lab.exe
