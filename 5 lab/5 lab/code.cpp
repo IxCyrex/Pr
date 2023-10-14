@@ -4,115 +4,113 @@
 #include<iostream>
 #include<time.h>
 #include<Windows.h>
-
 using namespace std;
 
-struct Node {
-	int data;
-	struct Node* left;
-	struct Node* right;
-};
+int* connect_graf;
 
+void output(int size) {
+	int schet = 0, schet1 = 0, schet2 = 0;
 
-struct Node* CreateTree(struct Node* root, struct Node* r, int data)
-{
-	if (r == NULL)
-	{
-		r = (struct Node*)malloc(sizeof(struct Node));
-		if (r == NULL)
-		{
-			printf("Ошибка выделения памяти");
-			exit(0);
+	for (int i = 0; i < size; i++) {
+		cout << i + 1 << " - " << connect_graf[i];
+		if (connect_graf[i] == size - 1) {
+			cout << "- доминирующий ";
+			schet++;
 		}
+		if (connect_graf[i] == 1) {
+			cout << "- концевой ";
+			schet1++;
+		}
+		if (connect_graf[i] == 0) {
+			cout << "- изолированный ";
+			schet2++;
+		}
+		cout << "\n";
 
-		r->left = NULL;
-		r->right = NULL;
-		r->data = data;
-		if (root == NULL) return r;
-
-		if (data > root->data)	root->left = r;
-		else root->right = r;
-		return r;
 	}
 
-	if (data > r->data)
-		CreateTree(r, r->left, data);
-	else
-		CreateTree(r, r->right, data);
-
-	return root;
+	if (schet == 0) { cout << "Доминирующих нет\n"; }
+	if (schet1 == 0) { cout << "Концевых нет\n"; }
+	if (schet2 == 0) { cout << "Изолированных нет\n"; }
 }
 
-
-
-void print_tree(struct Node* r, int l)
-{
-
-	if (r == NULL)
-	{
-		return;
-	}
-
-	print_tree(r->right, l + 1);
-	for (int i = 0; i < l; i++)
-	{
-		printf(" ");
-	}
-
-	printf("%d\n", r->data);
-	print_tree(r->left, l + 1);
-}
-
-void search(struct Node* r, int l) {
-
-	if (r == NULL)
-	{
-		cout << " Число не найдено";
-		return;
-	}
-	if (l == r->data) {
-		cout << " Число найдено";
-		return;
-	}
-	else if (r->data > l) {
-		search(r->left,цц
-
-
-
-
-
-
-
-
+int main() {
+	setlocale(LC_ALL, "Rus");
+	srand(time(NULL));
+	int** G, ** G_inc, size, size_graf = 0, rebro = 0, size_graf_inc = 0;
+	cout << " Матрица смежности \n \n Введите количество вершин графа: ";
+	cin >> size;
+	G = new int* [size]; // создаём двумерный массив 
+	connect_graf = new int[size];
+	for (int i = 0; i < size; i++) {
+		G[i] = new int[size];
+		connect_graf[i] = 0;
 	}
 
 
-	int main()
-	{
-		setlocale(LC_ALL, "");
-		int D, start = 1, poisk;
-		struct Node* root;
-
-		root = NULL;
-		printf("-1 - окончание построения дерева\n");
-		while (start)
-		{
-			printf("Введите число: ");
-			scanf_s("%d", &D);
-			if (D == -1)
-			{
-				printf("Построение дерева окончено\n\n");
-				start = 0;
+	for (int i = 0; i < size; i++) {
+		for (int j = i; j < size; j++) {
+			if (i == j) { G[i][j] = 0; }
+			else {
+				G[i][j] = rand() % 2;
+				G[j][i] = G[i][j];
 			}
-			else
-				root = CreateTree(root, root, D);
-
+			if (G[i][j] == 1) { size_graf++; }
 		}
-		cout << "Какоое число вы хотите найти";
-		cin >> poisk;
-		search(root, poisk);
-		print_tree(root, 0);
 
-		scanf_s("%d", &D);
-		return 0;
 	}
+
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			if (G[i][j] == 1) { connect_graf[i]++; }
+			cout << G[i][j] << " ";
+		}
+		cout << "\n";
+	}
+
+	cout << "\n Размер графа = " << size_graf << "\n\n";
+
+	output(size);
+
+	cout << "\nМатрица инцидентности\n" << endl;
+	G_inc = new int* [size]; // создаём двумерный массив 
+	for (int i = 0; i < size; i++) {
+		G_inc[i] = new int[size_graf];
+	}
+
+
+	for (int i = 0; i < size; i++) {
+		for (int j = i; j < size; j++) {
+			if (G[i][j] == 1) {
+				G_inc[j][rebro] = 1;
+				G_inc[i][rebro] = 1;
+				rebro++;
+				size_graf_inc++;
+			}
+		}
+	}
+
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size_graf; j++) {
+			if (G_inc[i][j] < 0) {
+				G_inc[i][j] = 0;
+			}
+			cout << G_inc[i][j] << " ";
+		}
+		cout << "\n";
+	}
+	cout << "\n Размер графа = " << size_graf_inc << "\n\n";
+
+	for (int i = 0; i < size; i++) {
+		connect_graf[i] = 0;
+		for (int j = 0; j < size_graf; j++) {
+			if (G_inc[i][j] == 1) { connect_graf[i]++; }
+		}
+	}
+
+	output(size);
+
+
+	system("pause");
+	return 0;
+}
