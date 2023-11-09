@@ -1,3 +1,4 @@
 ﻿  code.cpp
-C:\Users\ggggg\OneDrive\Рабочий стол\Pr\6 lab\6 lab\code.cpp(539,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\6 lab\6 lab\code.cpp(518,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\6 lab\6 lab\code.cpp(149): warning C4715: shet_po_name: значение возвращается не при всех путях выполнения
   6 lab.vcxproj -> C:\Users\ggggg\OneDrive\Рабочий стол\Pr\6 lab\x64\Debug\6 lab.exe
