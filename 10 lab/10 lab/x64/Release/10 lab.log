@@ -1,0 +1,12 @@
+﻿  10 lab.cpp
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\10 lab\10 lab\10 lab.cpp(62,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\10 lab\10 lab\10 lab.cpp(144,30): warning C4101: per: неиспользованная локальная переменная
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\10 lab\10 lab\10 lab.cpp(63,44): warning C4101: v: неиспользованная локальная переменная
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\10 lab\10 lab\10 lab.cpp(144,25): warning C4101: mid: неиспользованная локальная переменная
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\10 lab\10 lab\10 lab.cpp(63,19): warning C4101: vershina: неиспользованная локальная переменная
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\10 lab\10 lab\10 lab.cpp(63,47): warning C4101: who: неиспользованная локальная переменная
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 128 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  10 lab.vcxproj -> C:\Users\ggggg\OneDrive\Рабочий стол\Pr\10 lab\x64\Release\10 lab.exe

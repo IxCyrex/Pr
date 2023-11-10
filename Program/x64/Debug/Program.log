@@ -1,0 +1,8 @@
+﻿  Program.cpp
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\Program\Program.cpp(62,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\Program\Program.cpp(146,30): warning C4101: per: неиспользованная локальная переменная
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\Program\Program.cpp(63,42): warning C4101: v: неиспользованная локальная переменная
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\Program\Program.cpp(146,25): warning C4101: mid: неиспользованная локальная переменная
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\Program\Program.cpp(63,17): warning C4101: vershina: неиспользованная локальная переменная
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\Program\Program.cpp(63,45): warning C4101: who: неиспользованная локальная переменная
+  Program.vcxproj -> C:\Users\ggggg\OneDrive\Рабочий стол\Pr\Program\x64\Debug\Program.exe

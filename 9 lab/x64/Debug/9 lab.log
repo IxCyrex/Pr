@@ -1,0 +1,4 @@
+﻿  code.cpp
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\9 lab\code.cpp(224,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\ggggg\OneDrive\Рабочий стол\Pr\9 lab\code.cpp(225,17): warning C4101: vershina: неиспользованная локальная переменная
+  9 lab.vcxproj -> C:\Users\ggggg\OneDrive\Рабочий стол\Pr\9 lab\x64\Debug\9 lab.exe
